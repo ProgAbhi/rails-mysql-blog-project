@@ -1,0 +1,26 @@
+<div class="notice" style="color: green; margin-bottom: 1rem;">
+  <%= notice %>
+</div>
+
+<div class="post-container">
+  <p class="post-field">
+    <span><%= @post.title %></span>
+  </p>
+
+  <% if @post.image.attached? %>
+    <div class="post-field">
+      <%= image_tag url_for(@post.image), class: "post-image" %>
+    </div>
+  <% end %>
+
+  <p class="post-field">
+    <span><%= @post.content %></span>
+  </p>
+
+  <div class="post-actions">
+    <%= link_to "Edit", edit_post_path(@post), class: "btn btn-edit" %>
+    <%= link_to "Back", posts_path, class: "btn btn-back" %>
+    <%= button_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-delete" %>
+  </div>
+</div>
+

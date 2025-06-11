@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/* Reset + basic body */
+@import "devise.css";
+@import "components/posts";
+@import "components/post_show";
+
+body {
+  margin: 0;
+  padding:0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.navbar .brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .btn {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar .btn:hover {
+  background-color: #666;
+}
+
+.navbar .danger {
+  background-color: #c00;
+}
+
+.navbar .danger:hover {
+  background-color: #900;
+}
+
+.welcome {
+  margin-right: 10px;
+}
+
+/* Flash messages */
+.notice, .alert {
+  margin: 10px 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.notice {
+  background-color: #e6ffe6;
+  color: #006600;
+}
+
+.alert {
+  background-color: #ffe6e6;
+  color: #990000;
+}
+
+/* Container for page content */
+.container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* Responsive navbar (stack layout for small screens) */
+@media (min-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-right {
+    justify-content: flex-end;
+  }
+}
+

@@ -1,0 +1,82 @@
+/* app/assets/stylesheets/devise.css */
+
+/* Center the form */
+.devise-form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.devise-form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.register-form .actions input[type="submit"] {
+  background-color: #28a745;
+}
+
+.register-form .actions input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Form fields */
+.devise-form-container .field {
+  margin-bottom: 20px;
+}
+
+.devise-form-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.devise-form-container input[type="email"],
+.devise-form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit button */
+.devise-form-container .actions input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.devise-form-container .actions input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Error messages */
+#error_explanation {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+/* Specific style for login (Sign In) button */
+.login-form .actions input[type="submit"] {
+  background-color: #007bff;
+}
+
+.login-form .actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+

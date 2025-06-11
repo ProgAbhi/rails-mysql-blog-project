@@ -1,0 +1,16 @@
+<div id="<%= dom_id post %>">
+  <p>
+    <strong><%= post.title %></strong>
+  </p>
+
+  <% if @post.image.attached? %>
+    <div class="post-field">
+      <%= image_tag url_for(@post.image), class: "post-image" %>
+    </div>
+  <% end %>
+
+  <p>
+    <%= post.content %>
+  </p>
+
+</div>

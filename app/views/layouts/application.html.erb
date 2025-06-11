@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Blog App" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%= stylesheet_link_tag :"application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <%= link_to "MyBlog", root_path, class: "brand" %>
+      </div>
+      <div class="navbar-right">
+        <% if user_signed_in? %>
+          <span class="welcome">Welcome, <%= current_user.name %></span>
+          <%= link_to "New Post", new_post_path, class: "btn" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "btn danger" %>
+        <% else %>
+          <%= link_to "Register", new_user_registration_path, class: "btn" %>
+          <%= link_to "Login", new_user_session_path, class: "btn" %>
+        <% end %>
+      </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
+    <!-- Page content -->
+    <main class="container">
+      <%= yield %>
+    </main>
+
+    <!-- Required for method: :delete to work -->
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </body>
+</html>
