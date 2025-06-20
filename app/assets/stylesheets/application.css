@@ -10,8 +10,8 @@
  */
 /* Reset + basic body */
 @import "devise.css";
-@import "components/posts";
-@import "components/post_show";
+/* @import "components/posts"; */
+/* @import "components/post_show"; */
 
 body {
   margin: 0;
@@ -103,6 +103,216 @@ h1 {
   font-size: 2rem;
 }
 
+
+
+
+.posts-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #333;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-title {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.post-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.post-content {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+
+
+
+.post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.post-field {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-back {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+
+
+
+
+/* app/assets/stylesheets/devise.css */
+
+/* Center the form */
+.devise-form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.devise-form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.register-form .actions input[type="submit"] {
+  background-color: #28a745;
+}
+
+.register-form .actions input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Form fields */
+.devise-form-container .field {
+  margin-bottom: 20px;
+}
+
+.devise-form-container label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.devise-form-container input[type="email"],
+.devise-form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit button */
+.devise-form-container .actions input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.devise-form-container .actions input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Error messages */
+#error_explanation {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+/* Specific style for login (Sign In) button */
+.login-form .actions input[type="submit"] {
+  background-color: #007bff;
+}
+
+.login-form .actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
 /* Responsive navbar (stack layout for small screens) */
 @media (min-width: 600px) {
   .navbar {
@@ -114,5 +324,19 @@ h1 {
   .navbar-right {
     justify-content: flex-end;
   }
-}
 
+
+
+   .post-container {
+    padding: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .post-actions {
+    flex-direction: column;
+  }
+}
