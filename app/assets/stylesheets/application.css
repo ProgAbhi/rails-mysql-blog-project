@@ -103,8 +103,55 @@ h1 {
   font-size: 2rem;
 }
 
+.blog-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
+.form-group {
+  margin-bottom: 1rem;
+}
 
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-errors {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #0056b3;
+}
 
 .posts-heading {
   text-align: center;
@@ -161,9 +208,6 @@ h1 {
   font-size: 1rem;
   color: #555;
 }
-
-
-
 
 
 .post-container {
@@ -223,10 +267,6 @@ h1 {
 .btn:hover {
   opacity: 0.9;
 }
-
-
-
-
 
 
 /* app/assets/stylesheets/devise.css */
@@ -311,8 +351,6 @@ h1 {
   background-color: #0056b3;
 }
 
-
-
 /* Responsive navbar (stack layout for small screens) */
 @media (min-width: 600px) {
   .navbar {
@@ -324,8 +362,6 @@ h1 {
   .navbar-right {
     justify-content: flex-end;
   }
-
-
 
    .post-container {
     padding: 0.5rem;
